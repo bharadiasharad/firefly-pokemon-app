@@ -1,6 +1,16 @@
 
 # Pokemon App
 
+## Screenshot
+
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+
+## Short Video
+<video controls src="clideo_editor_801cd9c17f694087a3215335c4303f84.mp4" title="Title"></video>
+
+
 ## Table of Contents
 1. [How to Start](#how-to-start)
 2. [What is in the App](#what-is-in-the-app)
@@ -63,3 +73,4 @@
 - **Redux** for state management and caching Pokémon details.
 - **React.memo** for optimizing the rendering of the Pokémon list.
 - **Debouncing** for infinite scrolling to improve user experience.
+
