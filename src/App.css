@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+p::first-letter {
+  text-transform: capitalize;
+}
+
+/* Common tooltip styles */
+.tooltip-blue {
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Common styling for ability items */
+.ability-item {
+  padding: 0.25rem 0.75rem; /* px-3 py-1 */
+  background-color: #3b82f6; /* bg-blue-400 */
+  color: white;
+  border-radius: 9999px; /* rounded-full */
+  font-size: 0.75rem; /* text-xs */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* shadow-md */
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effects for ability items */
+.ability-item:hover {
+  transform: scale(1.1); /* hover:scale-110 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* hover:shadow-lg */
+}
+
+/* Loading state for tooltip */
+.tooltip-loading {
+  background-color: #f0f0f0;
+  color: #888;
+}
+
+/* Text styles */
+.text-gray-700 {
+  color: #4b5563; /* gray-700 */
+}
+
+/* Common styling for move items */
+.move-item {
+  padding: 0.25rem 0.75rem; /* px-3 py-1 */
+  background-color: #9333ea; /* bg-purple-400 */
+  color: white;
+  border-radius: 0.5rem; /* rounded-lg */
+  font-size: 0.75rem; /* text-xs */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* shadow-md */
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effects for move items */
+.move-item:hover {
+  transform: scale(1.05); /* hover:scale-105 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* hover:shadow-lg */
+}
+
+
+.font-semibold {
+  font-weight: 600;
+}
