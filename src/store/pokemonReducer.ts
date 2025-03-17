@@ -23,11 +23,11 @@ const initialState: PokemonState = {
 const pokemonReducer = (state = initialState, action: any): PokemonState => {
   switch (action.type) {
     case SET_POKEMON_LIST:
-      return { ...state, pokemonList: [...state.pokemonList, ...action.payload] };
+      return { ...state, pokemonList: Array.from(new Set([...state.pokemonList, ...action.payload])) };
     case SET_LOADING:
       return { ...state, loading: action.payload };
     case ADD_TO_WISHLIST:
-      return { ...state, wishlist: [...state.wishlist, ...action.payload] };
+      return { ...state, wishlist: Array.from(new Set([...state.wishlist, action.payload])) };
     case REMOVE_FROM_WISHLIST:
       return { ...state, wishlist: state.wishlist.filter(p => p.id !== action.payload.id) };
     case SET_SELECTED_POKEMON:
