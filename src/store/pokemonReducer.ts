@@ -10,11 +10,6 @@ export interface PokemonState {
   loading: boolean;
 }
 
-export interface PokemonActionTypes {
-  type: string;
-  payload: any;
-}
-
 const initialState: PokemonState = {
   pokemonList: [],
   wishlist: [],
@@ -25,7 +20,7 @@ const initialState: PokemonState = {
   loading: false,
 };
 
-const pokemon = (state = initialState, action: PokemonActionTypes): PokemonState => {
+const pokemonReducer = (state = initialState, action: any): PokemonState => {
   switch (action.type) {
     case SET_POKEMON_LIST:
       return { ...state, pokemonList: [...state.pokemonList, ...action.payload] };
@@ -48,4 +43,4 @@ const pokemon = (state = initialState, action: PokemonActionTypes): PokemonState
   }
 };
 
-export default pokemon;
+export default pokemonReducer;

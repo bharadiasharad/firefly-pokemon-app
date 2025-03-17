@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import pokemon from './pokemonReducer';
+import pokemonReducer from './pokemonReducer';
 
 const store = configureStore({
   reducer: {
-    pokemon
+    pokemon: pokemonReducer
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
 });
