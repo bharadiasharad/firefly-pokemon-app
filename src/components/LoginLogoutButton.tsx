@@ -73,8 +73,7 @@ const LoginLogoutButton: React.FC = () => {
         localStorage.setItem('access_token', response.data.access_token);
         setIsLoggedIn(true); // Update state to reflect logged in status
 
-        // Fetch favorites after login
-        fetchFavorites(response.data.access_token);
+        window.location.reload();
       }
     } catch (error) {
       console.error('Login failed', error);
@@ -86,6 +85,7 @@ const LoginLogoutButton: React.FC = () => {
     localStorage.removeItem('access_token');
     setIsLoggedIn(false); // Update state to reflect logged out status
     setFavorites([]); // Clear favorites on logout
+    window.location.reload();
   };
 
   return (
